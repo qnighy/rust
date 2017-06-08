@@ -121,6 +121,7 @@ pub enum ObligationCauseCode<'tcx> {
 
     /// Various cases where expressions must be sized/copy/etc:
     AssignmentLhsSized,        // L = X implies that L is Sized
+    TupleInitializerSized,     // (x1, .., xn) must be Sized
     StructInitializerSized,    // S { ... } must be Sized
     VariableType(ast::NodeId), // Type of each variable must be Sized
     ReturnType,                // Return type must be Sized

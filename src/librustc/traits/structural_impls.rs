@@ -189,6 +189,7 @@ impl<'a, 'tcx> Lift<'tcx> for traits::ObligationCauseCode<'a> {
                 tcx.lift(&ty).map(super::ObjectCastObligation)
             }
             super::AssignmentLhsSized => Some(super::AssignmentLhsSized),
+            super::TupleInitializerSized => Some(super::TupleInitializerSized),
             super::StructInitializerSized => Some(super::StructInitializerSized),
             super::VariableType(id) => Some(super::VariableType(id)),
             super::ReturnType => Some(super::ReturnType),
@@ -490,6 +491,7 @@ impl<'tcx> TypeFoldable<'tcx> for traits::ObligationCauseCode<'tcx> {
             super::TupleElem |
             super::ItemObligation(_) |
             super::AssignmentLhsSized |
+            super::TupleInitializerSized |
             super::StructInitializerSized |
             super::VariableType(_) |
             super::ReturnType |
@@ -535,6 +537,7 @@ impl<'tcx> TypeFoldable<'tcx> for traits::ObligationCauseCode<'tcx> {
             super::TupleElem |
             super::ItemObligation(_) |
             super::AssignmentLhsSized |
+            super::TupleInitializerSized |
             super::StructInitializerSized |
             super::VariableType(_) |
             super::ReturnType |
