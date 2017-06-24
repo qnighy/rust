@@ -92,6 +92,7 @@
     - [trace_macros](language-features/trace-macros.md)
     - [type_ascription](language-features/type-ascription.md)
     - [unboxed_closures](language-features/unboxed-closures.md)
+    - [unsized_tuple_coercion](language-features/unsized-tuple-coercion.md)
     - [untagged_unions](language-features/untagged-unions.md)
     - [unwind_attributes](language-features/unwind-attributes.md)
     - [use_extern_macros](language-features/use-extern-macros.md)
