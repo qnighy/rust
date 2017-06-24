@@ -356,7 +356,7 @@ declare_features! (
     (active, abi_thiscall, "1.19.0", None),
 
     // Allows unsized tuple coercion.
-    (active, unsized_tuple_coercion, "1.20.0", None),
+    (active, unsized_tuple_coercion, "1.20.0", Some(42877)),
 );
 
 declare_features! (
